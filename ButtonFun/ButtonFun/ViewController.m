@@ -7,6 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "RandomColorButtonGeneratorClass.h"
+
+#define SQUARE_WIDTH 40
+#define SQUARE_HEIGHT 40
 
 @interface ViewController ()
 
@@ -16,14 +20,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    self.view = [[RandomColorButtonGeneratorClass sharedInstance] addButtonsToView:self.view withButtonSize:CGSizeMake(SQUARE_WIDTH, SQUARE_HEIGHT) onViewSize:self.view.frame.size];
+}
 
+-(void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+{
+    [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context)
+     {
+         [[RandomColorButtonGeneratorClass sharedInstance]addButtonsToView:self.view withButtonSize:CGSizeMake(SQUARE_WIDTH, SQUARE_HEIGHT) onViewSize:size];
+         
+     } completion:^(id<UIViewControllerTransitionCoordinatorContext> context)
+     {}];
+    
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+}
 
 @end

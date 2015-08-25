@@ -14,6 +14,7 @@
 		1FF09B881B8BF806002E338C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FF09B871B8BF806002E338C /* Images.xcassets */; };
 		1FF09B8B1B8BF806002E338C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FF09B891B8BF806002E338C /* LaunchScreen.xib */; };
 		1FF09B971B8BF806002E338C /* ButtonFunTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF09B961B8BF806002E338C /* ButtonFunTests.m */; };
+		1FF09BA81B8BFD48002E338C /* RandomColorButtonGeneratorClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF09BA71B8BFD48002E338C /* RandomColorButtonGeneratorClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		1FF09B901B8BF806002E338C /* ButtonFunTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ButtonFunTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FF09B951B8BF806002E338C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FF09B961B8BF806002E338C /* ButtonFunTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ButtonFunTests.m; sourceTree = "<group>"; };
+		1FF09BA61B8BFD48002E338C /* RandomColorButtonGeneratorClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomColorButtonGeneratorClass.h; sourceTree = "<group>"; };
+		1FF09BA71B8BFD48002E338C /* RandomColorButtonGeneratorClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomColorButtonGeneratorClass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				1FF09B7F1B8BF806002E338C /* AppDelegate.m */,
 				1FF09B811B8BF806002E338C /* ViewController.h */,
 				1FF09B821B8BF806002E338C /* ViewController.m */,
+				1FF09BA61B8BFD48002E338C /* RandomColorButtonGeneratorClass.h */,
+				1FF09BA71B8BFD48002E338C /* RandomColorButtonGeneratorClass.m */,
 				1FF09B841B8BF806002E338C /* Main.storyboard */,
 				1FF09B871B8BF806002E338C /* Images.xcassets */,
 				1FF09B891B8BF806002E338C /* LaunchScreen.xib */,
@@ -222,6 +227,7 @@
 				1FF09B831B8BF806002E338C /* ViewController.m in Sources */,
 				1FF09B801B8BF806002E338C /* AppDelegate.m in Sources */,
 				1FF09B7D1B8BF806002E338C /* main.m in Sources */,
+				1FF09BA81B8BFD48002E338C /* RandomColorButtonGeneratorClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,7 +374,6 @@
 		1FF09B9E1B8BF806002E338C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -380,14 +385,13 @@
 				INFOPLIST_FILE = ButtonFunTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ButtonFun.app/ButtonFun";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Button Fun.app/Button Fun";
 			};
 			name = Debug;
 		};
 		1FF09B9F1B8BF806002E338C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -395,7 +399,7 @@
 				INFOPLIST_FILE = ButtonFunTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ButtonFun.app/ButtonFun";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Button Fun.app/Button Fun";
 			};
 			name = Release;
 		};
